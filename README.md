@@ -37,3 +37,7 @@ npx nightwatch
 npx nightwatch run enterYourTestFileNameHere.js
 ```
 
+## Useful Resources
+- Nightwatch [API docs] (https://nightwatchjs.org/api/) 
+- Explanation of [terminal and setup config] (https://www.hashbangcode.com/article/getting-and-running-nightwatchjs)
+- Video tutorials from [Testing Automation University] (https://testautomationu.applitools.com/nightwatchjs-tutorial/)

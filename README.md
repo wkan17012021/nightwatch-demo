@@ -33,8 +33,8 @@ Create in your code editor, a folder containing your tests and of course it shou
 Back in terminal:
 
 ```
-npx nightwatch
-npx nightwatch run enterYourTestFileNameHere.js
+npx nightwatch run
+npx nightwatch enterYourTestFileNameHereAndFilePath.js
 ```
 
 ## Useful Resources

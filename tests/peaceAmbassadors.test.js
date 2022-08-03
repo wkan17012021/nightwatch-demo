@@ -5,10 +5,10 @@ module.exports = {
         peaceAmbassador.navigate()
         .waitForElementVisible('@firstAmbassador')
         .click('@firstAmbassador')
-        .pause(2000)
-        .waitForElementVisible('@modalActivePanel')
+        .pause(1000)
+        .assert.visible('@modalActivePanel')
         .click('@closeMeBtnModal')
-        .pause(2000);
+        .assert.not.visible('@modalActivePanel');
         
     }
     

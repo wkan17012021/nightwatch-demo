@@ -1,6 +1,7 @@
 const homePage = require("../pages/homePage");
-
+// run specific tests on a case-by-case basis using tags like below. In terminal npx nightwatch --tag smoke
 module.exports = {
+    'tags': ['smoke'],
     "User can navigate to homepage and checks nav elements": function (browser) {
         var mainNavMenu = browser.page.homePage();
 

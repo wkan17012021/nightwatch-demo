@@ -1,7 +1,7 @@
 const homePage = require("../pages/homePage");
-// run specific tests on a case-by-case basis using tags like below. In terminal npx nightwatch --tag smoke
+// run specific tests on a case-by-case basis using tags like below. In terminal npx nightwatch --tag smoke-homepage
 module.exports = {
-    'tags': ['smoke'],
+    'tags': ['smoke-homepage'],
     "User can navigate to homepage and checks nav elements": function (browser) {
         var mainNavMenu = browser.page.homePage();
 
@@ -14,6 +14,7 @@ module.exports = {
         const mediaLinkText = 'MEDIA';
 
         mainNavMenu.navigate()
+        //.peform(() => {debugger})
             .waitForElementVisible('@megaMenu')
             .assert.textContains('@megaMenu', aboutUsLinkText, 'Test that ABOUT US exists in the header')
             .assert.textContains('@megaMenu', summitLinkText, 'Test that THE SUMMIT exists in the header')

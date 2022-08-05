@@ -41,3 +41,16 @@ npx nightwatch enterYourTestFileNameHereAndFilePath.js
 - Nightwatch [API docs] (https://nightwatchjs.org/api/) 
 - Explanation of [terminal and setup config] (https://www.hashbangcode.com/article/getting-and-running-nightwatchjs)
 - Video tutorials from [Testing Automation University] (https://testautomationu.applitools.com/nightwatchjs-tutorial/)
+
+## Debugging
+
+// debugger;
+// .perform(() => {debugger})
+
+node --inspect -brk node_modules/.bin/nightwatch -- tests/homepage.test.js
+node --inspect -brk node_modules/.bin/nightwatch -- --tag smoke-homepage
+chrome://inspect/#devices
+Under Remote Target, click inspect link. Then run the script execution (play btn top-right)
+Adding debugger in the script automatically stops the execution at the line where this keyword is written. 
+Alternatively, using the .perform() closure above also stops the script.
+Using the debugger tool is useful in checking state of interactive components right before an execution event.

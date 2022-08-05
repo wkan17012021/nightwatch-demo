@@ -1,6 +1,6 @@
 module.exports = {
     "User can navigate to scholarships page and open faq accordion": function (browser) {
-        //.execute() is not considered a function when chained to page obj. Place all selectors and URL in the test page instead. Execute() is required to scroll the page down so the faq accordion is visible in the screen. The coordinates are trial & error- Nightwatch should have a method that auto scrolls the element into view.
+
         var scholarship = browser.page.scholarships();
 
         // const gdprbtn = '#gdpr-agree';
@@ -9,6 +9,9 @@ module.exports = {
         scholarship.navigate()
         // .waitForElementVisible('@gdprbtn')
         // .click('@gdprbtn');
+
+        // scholarship.execute cannot be run because the execute method exists within scholarship.api property. 
+        // Use dev tools to print out the page obj and drill down into its keys / values.
 
         scholarship.api.execute('scrollTo(500, 11000)')
         .pause(2000)

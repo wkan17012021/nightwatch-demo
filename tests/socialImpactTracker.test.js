@@ -7,8 +7,11 @@ module.exports = {
         .waitForElementVisible('@gdprBtn')
         .click('@gdprBtn')
         .waitForElementVisible('@firstProjCard')
+        .saveScreenshot('./socialImpactScreenshots/beforeProjCard.png')
         .click('@firstProjCard')
-        .pause(3000);
+        .pause(2000)
+        .saveScreenshot('./socialImpactScreenshots/afterProjCard.png');
+        
+        // browser.saveScreenshot('/screenshots/impactTrackerTest.png')
     }
-    
 }

@@ -5,13 +5,15 @@ module.exports = {
         impactTrackerPage.navigate()
         .pause(2000)
         .waitForElementVisible('@gdprBtn')
-        .click('@gdprBtn')
-        .waitForElementVisible('@firstProjCard')
+        .click('@gdprBtn');
+
+        impactTrackerPage.api.execute('scrollTo(500, 750)');
+
+        impactTrackerPage.waitForElementVisible('@firstProjCard')
         .saveScreenshot('./socialImpactScreenshots/beforeProjCard.png')
         .click('@firstProjCard')
         .pause(2000)
         .saveScreenshot('./socialImpactScreenshots/afterProjCard.png');
         
-        // browser.saveScreenshot('/screenshots/impactTrackerTest.png')
     }
 }

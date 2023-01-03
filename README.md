@@ -55,3 +55,4 @@ npx nightwatch enterYourTestFileNameHereAndFilePath.js
 - Adding debugger in the script automatically stops the execution at the line where this keyword is written. 
 - Alternatively, using the .perform() closure above also stops the script.
 - Using the debugger tool is useful in checking state of interactive components right before an execution event.
+- After returning to this project 6 months later, my Chrome Browser was incompatible with the Webdriver used to run the browser context. Went to (ChromeDriver website)[https://chromedriver.chromium.org/downloads] and matched their version number with my browser version: copy paste chromedriver.exe and place in node_modules/.bin/ folder

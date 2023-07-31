@@ -10,8 +10,8 @@ module.exports = {
         const communityLinkText = 'COMMUNITY';
         const eventsLinkText = 'EVENTS';
         const impactLinkText = 'IMPACT';
-        const programmesLinkText = 'PROGRAMMES';
-        const mediaLinkText = 'MEDIA';
+        const scholarshipsLinkText = 'SCHOLARSHIPS';
+        const newsLinkText = 'NEWS';
 
         mainNavMenu.navigate()
         //.peform(() => {debugger})
@@ -21,8 +21,8 @@ module.exports = {
             .assert.textContains('@megaMenu', communityLinkText, 'Test that COMMUNITY exists in the header')
             .assert.textContains('@megaMenu', eventsLinkText, 'Test that EVENTS exists in the header')
             .assert.textContains('@megaMenu', impactLinkText, 'Test that IMPACT exists in the header')
-            .assert.textContains('@megaMenu', programmesLinkText, 'Test that PROGRAMMES exists in the header')
-            .assert.textContains('@megaMenu', mediaLinkText, 'Test that MEDIA exists in the header')
+            .assert.textContains('@megaMenu', scholarshipsLinkText, 'Test that SCHOLARSHIPS exists in the header')
+            .assert.textContains('@megaMenu', newsLinkText, 'Test that NEWS exists in the header')
             ;
     }
 }
